@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Scrollbar base */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #111827; /* gris claro */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #111827; /* gris medio */
+  border-radius: 10px;
+}
+
+/* Dark mode support */
+.dark .custom-scrollbar::-webkit-scrollbar-track {
+  background: #111827; /* gris oscuro */
+  border-radius: 10px;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #1f2937; /* gris más claro */
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #d1d5db; /* Tailwind gray-300 */
+  background-color: #111827 !important; /* Tailwind gray-900 */
+  box-shadow: 0 0 0px 1000px #111827 inset !important; /* for dark mode */
+}
+
+@media (min-width: 1024px) {
+  .my-container {
+    display: flex;
+    gap: 20px;
+    height: 500px;
+  }
+  .container1 {
+    width: 50%;
+  }
+  .container2 {
+    width: 50%;
+  }
+}
